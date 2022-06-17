@@ -1,0 +1,21 @@
+.product{
+    border: 1px solid #202020;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 5px;
+    box-shadow: 5px 5px 5px grey;
+}
+.product:hover{
+    transition: .2s;
+    transform: scale(1.05);
+    border: 1px solid red;
+}
+
+.product h2 {
+    color: black;
+}
+.product .product-img{
+    width: 300px;
+    height: 300px;
+}

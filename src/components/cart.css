@@ -1,0 +1,15 @@
+.cart{
+    background-color: #f1f4f5;
+    padding: 3rem;
+}
+
+
+.cart h6{
+    color: rgba(66, 153, 225, 0.6);
+    text-align: center;
+}
+
+.cart h3{
+    text-align: center;
+
+}
