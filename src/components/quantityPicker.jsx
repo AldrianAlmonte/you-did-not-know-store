@@ -1,5 +1,6 @@
 import "./quantityPicker.css";
 
+
 import {useState} from 'react';
 
 const QuantityPicker = (props) => {
@@ -41,5 +42,5 @@ const QuantityPicker = (props) => {
 
 export default QuantityPicker;
 
-import React from 'react'
+
 
