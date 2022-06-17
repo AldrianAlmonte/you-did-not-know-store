@@ -1,14 +1,20 @@
 import "./admin.css";
 import { useState } from "react";
 
+
 const Admin = () => {
   const [product, setProduct] = useState({});
   const [coupon, setCoupon] = useState({});
   const [allCoupons, setAllCoupons] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
   //                            useState values are immutable (should not change)
 
   const saveProduct = () => {
     console.log("saving product", product);
+
+    let copy = [...allProducts];
+    copy.push(product);
+    setAllProducts(copy);
   };
 
   const textChanged = (e) => {
@@ -39,12 +45,17 @@ const Admin = () => {
 
   const saveCoupon = () => {
     console.log("Saving coupon", coupon);
+
+
+    // add the coupon to allCoupons array
+    let copy = [...allCoupons];
+    copy.push(allCoupons);
+    setAllCoupons(copy);
+
   };
 
-  // add the coupon to allCoupons array
-  let copy = [...allCoupons];
-  copy.push(coupon);
-  setAllCoupons(copy);
+
+  
 
   //todo: send the coupon to service -> backend
 
@@ -102,6 +113,14 @@ const Admin = () => {
               Save
             </button>
           </div>
+
+
+          <hr />
+
+            <ul>
+               {allProducts.map((p, index) => <li key={index}>{p.title} - {p.price}</li>)}
+            </ul>
+
         </section>
 
         <section className="coupons">
@@ -133,11 +152,15 @@ const Admin = () => {
             </button>
           </div>
 
+            
             <hr />
+            {/* li is not parsing text value */}
             <ul>
-                <li>
-                    
+                {allCoupons.map((c, index) => (
+                <li key={index}>
+                  {c.code} - {c.discount}
                 </li>
+                ))}
             </ul>
 
 
