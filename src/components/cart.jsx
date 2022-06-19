@@ -15,14 +15,14 @@ const Cart = () => {
 
     return(
         <div className="cart">
-            <h6>These are the Products on your cart</h6>
-            <h3>Order</h3>
+            <h6>You have {cart.length} product!</h6>
+            <h3>Ready to Order?</h3>
             <hr />
 
             <ul>
                 {cart.map((prod) => (
                     <li key={prod.id}>
-                        {/* {prod.title} - ${prod.price} - {prod.quantity} */}
+                        {prod.title} - ${prod.price} - {prod.quantity}
                         {/* <ProductInCart key={prod._id} data={prod}></ProductInCart> */}
                     </li>
                 ))}
