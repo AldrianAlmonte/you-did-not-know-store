@@ -1,6 +1,7 @@
-import "/productInCart.css"
+import "./productInCart.css"
 
-const ProductInCart = () => {
+
+const ProductInCart = (props) => {
     return(
         <div className="product-cart">
             <img className="productImg" src={"/img/" + props.data.image} alt="product" />

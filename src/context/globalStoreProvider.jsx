@@ -20,7 +20,9 @@ const GlobalStoreProvider = (props) => {
     return(
         <StoreContext.Provider value={{
             cart: cart,
-            user: user
+            user: user,
+            addProdToCart: addProductToCart,
+            removeProdFromCart: removeProductFromCart,
         }}>
             {props.children}
         </StoreContext.Provider>

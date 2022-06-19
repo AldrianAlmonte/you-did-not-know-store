@@ -8,6 +8,7 @@ import StoreContext from "../context/storeContex";
 const Product = (props) => {
     let [quantity, setQuantity] = useState(1);
     let addProdToCart = useContext(StoreContext).addProdToCart;
+    let removeProdFromCart = useContext(StoreContext).removeProdFromCart;
 
     let onQuantityChange = (value) => {
         // use the value to update the quanity
@@ -29,6 +30,7 @@ const Product = (props) => {
         addProdToCart(prodForCart);
 
     };
+
 
     return (
         <div className="product">
