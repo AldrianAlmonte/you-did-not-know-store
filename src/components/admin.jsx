@@ -34,17 +34,18 @@ const Admin = () => {
     //TODO: send the product to service -> to backend
   };
 
-  const couponChanged = (e) => {
-    let name = e.target.name;
-    let val = e.target.value;
-
-    let copy = { ...coupon };
-    copy[name] = val;
-    setCoupon(copy);
-  };
-
   const saveCoupon = () => {
     console.log("Saving coupon", coupon);
+
+
+
+    /**
+     * 1. service create a method that receives an object
+     * it will send the object on an axios post re
+     * 
+     * 2. create a instance of the service
+     * 3. call the new method and paa coupon obj
+     */
 
 
     // add the coupon to allCoupons array
@@ -52,6 +53,16 @@ const Admin = () => {
     copy.push(allCoupons);
     setAllCoupons(copy);
 
+  };
+
+
+  const couponChanged = (c) => {
+    let code = c.target.name;
+    let discount = c.target.value;
+
+    let copy = { ...coupon };
+    copy[code] = discount;
+    setCoupon(copy);
   };
 
 
@@ -155,12 +166,9 @@ const Admin = () => {
             
             <hr />
             {/* li is not parsing text value */}
+      
             <ul>
-                {allCoupons.map((c, index) => (
-                <li key={index}>
-                  {c.code} - {c.discount}
-                </li>
-                ))}
+                {allCoupons.map((c, index) => <li key={index}>{c.code} - {c.discount}</li>)}
             </ul>
 
 

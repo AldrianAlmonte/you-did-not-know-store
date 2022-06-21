@@ -13,3 +13,18 @@
     text-align: center;
 
 }
+
+.cart .parent{
+    display: flex;
+
+}
+.cart .products{
+    flex: 4;
+}
+.cart .total-panel{
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid black;
+
+
+}

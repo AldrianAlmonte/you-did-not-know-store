@@ -1,0 +1,27 @@
+.product-cart{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 10px;
+    padding: 20px 10px;
+    display: flex;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-cart img{
+    width: 80%;
+    max-width: 150px;
+    height: auto;
+    flex: 2;
+}
+.product-cart .description{
+    flex: 7;
+}
+.product-cart label{
+    flex: 1;
+}
+.product-cart .button{
+    flex: 1;
+}

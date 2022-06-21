@@ -12,6 +12,14 @@ import StoreContext from "../context/storeContex";
 function Navbar() {
   let cart = useContext(StoreContext).cart;
 
+  const getNumItems = () => {
+       let total = 0;
+       for (let i=0; i < cart.length; i++) {
+          total += cart[i].quantity;
+       }
+       return total;
+  };
+
   // custom components will start with a capital letter and returm something
   return (
     //in JSX you will use className for CSS
@@ -54,7 +62,7 @@ function Navbar() {
           </ul>
           <form className="d-flex">
             <Link className="btn btn-outline-light" to="/cart">
-              {cart.length} Cart
+              {getNumItems()} Cart
             </Link>
           </form>
         </div>
