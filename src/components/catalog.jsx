@@ -8,9 +8,9 @@ const Catalog=()=>{
 
 
 
-    const loadCatalog = () => {
+    const loadCatalog = async () => {
         let service = new DataService(); // instance
-        let data = service.getCatalog();
+        let data = await service.getCatalog();
         setProducts(data);
     };
 

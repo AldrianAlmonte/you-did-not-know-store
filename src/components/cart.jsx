@@ -5,10 +5,13 @@ import ProductInCart from "./productInCart";
 
 
 
+
 const Cart = () => {
+    let total = 0;
+    
     let cart = useContext(StoreContext).cart;
 
-    const getTotal = () => {
+    const getSubTotal = () => {
         let total = 0;
         for (let i=0;i<cart.length;i++){
             let prod = cart[i];
@@ -25,6 +28,14 @@ const Cart = () => {
         }
         return total;
    };
+
+//    const getTax = () => {
+//     let tax = 0.07 * total;
+    
+
+//     return tax;
+
+//    };
  
 
 
@@ -43,8 +54,12 @@ const Cart = () => {
                     </div>
                     
                     <div className="total-panel">
-                        <h3>Your Total:</h3> 
-                        <h2>${getTotal()}</h2>
+                        <br></br>
+                        <br></br>
+                        <h3>Your Total</h3>
+                        <h2>${getSubTotal()}</h2>
+                        {/* <h5>Tax ${getTax()}</h5>  */}
+                        
                     </div>
                 </div>
         </div>

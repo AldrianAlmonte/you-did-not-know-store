@@ -50,7 +50,7 @@ const Admin = () => {
 
     // add the coupon to allCoupons array
     let copy = [...allCoupons];
-    copy.push(allCoupons);
+    copy.push(coupon);
     setAllCoupons(copy);
 
   };

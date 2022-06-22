@@ -1,3 +1,5 @@
+import axios from "axios";
+
 var catalog = [
     {
         _id: "154",
@@ -49,11 +51,18 @@ var catalog = [
 
 
 class DataService{
-  getCatalog(){
+  async getCatalog(){
+
+    // get data from server
+    let response = await axios.get("http://127.0.0.1:5000/api/catalog");
+    let data = response.data;
+
+    return data;
+
     //some instructions to
     //retrieve data from the actual server
 
-    return catalog;
+    // return catalog;
   }
 }
 
